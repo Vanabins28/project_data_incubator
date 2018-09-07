@@ -1,0 +1,28 @@
+<!doctype html>
+<title>A short quiz</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style.css')}}'>
+<div class=page>
+  <h1>Stock price graphing</h1>
+  <div class=metanav>
+
+<h4>
+Please input ticker name, start date, and end date in (YYYY-MM-DD format)
+</h4>
+
+<form id='userinfoform_lulu' method='post' action='graph_data' > <!-- action is the URL you want to move to next-->
+   <p>
+   Ticker Name: <input type='text' name='ticker' />
+   </p>
+   <p>
+   Start Date: <input type='text' name='time_a' />
+   </p>
+   <p>
+   End Date: <input type='text' name='time_b' />
+   </p>
+   <p>
+   <input type='submit' value='Submit' /> <!-- value is the text that will appear on the button. -->
+   </p>
+</form>
+
+</div>
+</div>
