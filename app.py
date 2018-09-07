@@ -39,7 +39,7 @@ def make_graph():
   request_url="https://www.quandl.com/api/v3/datasets/WIKI/"+ticker+".csv"
  
   data=requests.get(request_url)
-  open('tempq.csv', 'wb').write(data)
+  open('tempq.csv', 'w').write(data.text)
 #  with open('tempq.csv','w') as g:
 #      g.writelines(data)
 #  df= pd.read_csv('/temp.csv')
