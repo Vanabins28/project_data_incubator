@@ -39,8 +39,9 @@ def make_graph():
   request_url="https://www.quandl.com/api/v3/datasets/WIKI/"+ticker+".csv"
  
   data=requests.get(request_url)
-  with open('tempq.csv','w') as g:
-      g.writelines(data)
+  open('tempq.csv', 'wb').write(data)
+#  with open('tempq.csv','w') as g:
+#      g.writelines(data)
 #  df= pd.read_csv('/temp.csv')
   df = pd.read_csv('tempq.csv')
   mask = (df['Date'] > time_a) & (df['Date'] <= time_b)
